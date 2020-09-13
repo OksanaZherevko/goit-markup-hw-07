@@ -898,6 +898,12 @@ a.filtre:focus {
   display: block;
 }
 
+.filtre:focus .hover-card {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .portfolio-card {
   position: relative;
   border: 0;
