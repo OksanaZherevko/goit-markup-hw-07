@@ -311,6 +311,14 @@ img {
   border: none;
 }
 
+.btn-send {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, -80%);
+          transform: translate(-50%, -80%);
+}
+
 .hero {
   max-width: 1600px;
   min-height: 600px;
@@ -755,58 +763,45 @@ img {
   fill: #2196F3;
 }
 
-.check-box {
-  position: relative;
-  display: block;
-  margin-left: 12px;
-  margin-right: auto;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
 .checkbox {
-  width: 16px;
-  height: 15px;
-  border-radius: 2px;
-  margin-right: 7px;
-}
-
-.check-icon {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-icon {
+  display: inline-block;
   width: 16px;
   height: 15px;
+  margin-right: 7px;
   border: 2px solid #212121;
-  border-radius: 2px;
-  margin-right: 8px;
-  fill: #FFFFFF;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition-property: border, background-color;
+  transition-property: border, background-color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:checked + .check-icon {
-  fill: #2196F3;
-  border: none;
-}
-
-.form-text-accept {
-  margin-left: 24px;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
-
-/*ВОПРОС*/
-.checkbox:checked + .form-text-accept {
+.checkbox:checked + .checkbox-icon {
+  background-color: #2196F3;
   background-image: url("../images/checkbox_vector.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: border-box;
-  border-color: var(--accent-color);
+  border-color: accent-color;
+}
+
+.checkbox:focus ~ .checkbox-icon {
+  border-color: #2196F3;
 }
 
 .contract {

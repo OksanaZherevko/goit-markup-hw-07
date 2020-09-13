@@ -474,15 +474,11 @@
             <textarea name="comment" id="comment" placeholder="Введите текст" class="input-box comment" cols="30" rows="10"></textarea>
           </label>
 
-          <label class="check-box">
-              <input type="checkbox" class="checkbox visually-hidden" name="checkbox"/>
-              <svg class="check-icon" width="16" height="15">
-                <use href="./images/sprite_new.svg#icon-checkbox"></use>
-              </svg>
-              <p class="form-text-accept">
-                Соглашаюсь с рассылкой и принимаю
-                <a href="" class="contract">Условия договора</a>
-              </p>
+          <label class="form-label">
+            <input class="checkbox" type="checkbox" name="policy" value="policy" id="policy"/>
+            <span class="checkbox-icon"></span>
+            Соглашаюсь с рассылкой и принимаю
+            <a href="#" class="contract">Условия договора</a>
           </label>
 
             <button type="submit" class="button primary btn-send">

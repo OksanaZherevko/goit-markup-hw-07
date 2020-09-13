@@ -69,7 +69,7 @@
   border: none;
 
   color: $dark-color;
-  background-color:  $teams-color;
+  background-color: $teams-color;
 
   font-family: $font-family-primary;
   font-weight: 500;
@@ -88,4 +88,12 @@
       0px 2px 2px rgba(0, 0, 0, 0.12);
     border: none;
   }
+}
+
+//*Кнопка в модальном окне*//
+.btn-send {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -80%);
 }
